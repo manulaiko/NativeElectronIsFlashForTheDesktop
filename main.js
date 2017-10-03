@@ -13,14 +13,11 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 1024, height: 576})
+  mainWindow.setMenu(null)
 
-  // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  // and load the article
+  mainWindow.loadURL("https://josephg.com/blog/electron-is-flash-for-the-desktop/")
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
